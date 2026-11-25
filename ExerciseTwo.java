@@ -14,10 +14,11 @@ public class ExerciseTwo {
             System.out.println("Welcome admin");
         } else if (role.equalsIgnoreCase("superuser")) {
             System.out.println("Welcome superuser");
+        } else if (role.equalsIgnoreCase("user")){
+            System.out.println("Welcome user");
         }
         else {
-            System.out.println("Welcome user");
-
+            System.out.println("Sorry you dont have role");
         }
 
 //
@@ -51,8 +52,7 @@ public class ExerciseTwo {
 //        Expected Output:
 //        Wednesday
 
-        System.out.println("Enter any number from 1 to 7:");
-        int day = input.nextInt();
+        int day = (int)(Math.random()*7)+1;
 
         switch (day){
             case 1:
@@ -95,19 +95,23 @@ public class ExerciseTwo {
         System.out.println("Enter your numeric score:");
         int score = input.nextInt();
         System.out.println("Numeric score:"+score);
-        if (score>=90){
-            System.out.println("Letter grade: A");
-        }
-        else if (score>=80){
-            System.out.println("Letter grade: B");
-        } else if (score>=70){
-            System.out.println("Letter grade: C");
-        }
-        else if (score>=60){
-            System.out.println("Letter grade: D");
-        }
-        else{
-            System.out.println("Letter grade: F");
+        if (score>100 ||score<0){
+            System.out.println("Sorry wrong number");
+        }else {
+            if (score>=90){
+                System.out.println("Letter grade: A");
+            }
+            else if (score>=80){
+                System.out.println("Letter grade: B");
+            } else if (score>=70){
+                System.out.println("Letter grade: C");
+            }
+            else if (score>=60){
+                System.out.println("Letter grade: D");
+            }
+            else{
+                System.out.println("Letter grade: F");
+            }
         }
 //        5. Write a Java program that takes a person's age as input and
 //        categorizes them into one of three age categories: "Child,"
